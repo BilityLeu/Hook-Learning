@@ -21,7 +21,7 @@ WH_CALLWNDPROC和WH_CALLWNDPROCRET Hooks使你可以监视发送到窗口过程�
 当应用程序的前台线程处于空闲状态时，可以使用WH_FOREGROUNDIDLE Hook执行低优先级的任务。当应用程序的前台线程大概要变成空闲状态时，系统就会调用WH_FOREGROUNDIDLE Hook子程。
 
 # 5. WH_GETMESSAGE 钩子（常量为3）
-应用程序使用WH_GETMESSAGE Hook来监视从GetMessage orPeekMessage函数返回的消息。你可以使用WH_GETMESSAGE Hook去监视鼠标和键盘输入，以及其他发送到消息队列中的消息。
+应用程序使用WH_GETMESSAGE Hook来监视从GetMessage or PeekMessage函数返回的消息。你可以使用WH_GETMESSAGE Hook去监视鼠标和键盘输入，以及其他发送到消息队列中的消息。
 
 # 6. WH_JOURNALPLAYBACK 钩子（常量为1）
 WH_JOURNALPLAYBACK Hook使应用程序可以插入消息到系统消息队列。可以使用这个Hook回放通过使用WH_JOURNALRECORD Hook记录下来的连续的鼠标和键盘事件。只要WH_JOURNALPLAYBACK Hook已经安装，正常的鼠标和键盘事件就是无效的。
@@ -35,7 +35,7 @@ WH_JOURNALRECORD Hook是全局Hook，它不能象线程特定Hook一样使用。
 WH_JOURNALRECORD是system-wide local hooks，它们不会被注射到任何行程位址空间。
 
 # 8. WH_KEYBOARD 钩子（常量为2）
-在应用程序中，WH_KEYBOARD Hook用来监视WM_KEYDOWN andWM_KEYUP消息，这些消息通过GetMessage orPeekMessage function返回。可以使用这个Hook来监视输入到消息队列中的键盘消息。
+在应用程序中，WH_KEYBOARD Hook用来监视WM_KEYDOWN andWM_KEYUP消息，这些消息通过GetMessage or PeekMessage function返回。可以使用这个Hook来监视输入到消息队列中的键盘消息。
 
 # 9. WH_KEYBOARD_LL 钩子（常量为13）
 WH_KEYBOARD_LL Hook监视输入到线程消息队列中的键盘消息。
